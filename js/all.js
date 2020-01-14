@@ -10,7 +10,7 @@ let puppyAccount = document.querySelector('.puppyAccount');
 //---------點擊貓按鈕，右邊圖形更換成貓咪--------
 function kittenChange() {
     puppyAccount.src = "img/kitten1.png";
-    console.log(kittenPngChange);
+    puppyAccount.id = "kitten_1";
     for (let i = 0; i < puppyPngChange.length; i++) {
         puppyPngChange[i].style.display = "none";
         kittenPngChange[i].style.display = "block";
@@ -22,7 +22,7 @@ kitten.addEventListener('click', kittenChange);
 //---------點擊狗按鈕，右邊圖形更換成小狗--------
 function puppyChange() {
     puppyAccount.src = "img/puppy1.png";
-    console.log(puppyPngChange);
+    puppyAccount.id = "puppy_1";
     for (let i = 0; i < puppyPngChange.length; i++) {
         kittenPngChange[i].style.display = "none";
         puppyPngChange[i].style.display = "block";
@@ -55,10 +55,13 @@ function signUp(e) {
     let account = {};
     account.author = name;
     account.animalId = animalId;
+    account.message = "告訴大家你現在的心情";
     console.log(account);
 
+    window.location = "chatroom.html";
+
     let xhr = new XMLHttpRequest();
-    xhr.open('post', 'http://localhost:3000/posts/', true);
+    xhr.open('post', 'http://localhost:3000/account/', true);
     xhr.setRequestHeader('Content-type', 'application/json');
     let data = JSON.stringify(account);
     xhr.send(data);

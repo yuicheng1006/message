@@ -12,7 +12,7 @@
     src: local('Finland Rounded Thin'), url('webfont/Finland Rounded Thin.woff') format('woff');
 }
 
-
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
 
 * {
     /* outline: 1px dotted red; */
@@ -131,6 +131,7 @@ h2 {
 .chatWrap_3 {
     width: 25%;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     padding-right: 50px;
 }
@@ -138,7 +139,7 @@ h2 {
 .animalSelect {
     display: flex;
     flex-direction: column;
-    margin: 55px 0px 0px;
+
 }
 
 
@@ -217,4 +218,258 @@ h2 {
     margin: 30px 0px 40px;
     font-weight: 900;
     color: #524A4A;
+}
+
+/* --------------chatroom.html-------------- */
+
+.chatRoom {
+    display: flex;
+    width: 100%;
+    height: 94vh;
+}
+
+.chatRoomHeader {
+    height: 6vh;
+}
+
+.leftWrap {
+    width: 20%;
+    background-color: #766B6B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    font-family: "Noto Sans TC";
+    color: #FFF;
+}
+
+.block {
+    width: 120px;
+    height: 120px;
+    background-color: #524A4A;
+    box-shadow: 0px 6px 10px #00000017;
+    border-radius: 50%;
+    margin: 8px;
+    display: flex;
+    cursor: pointer;
+}
+
+.block:hover {
+    background-color: #E8A87E;
+}
+
+.block p {
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+
+
+.headPng {
+    width: 100px;
+}
+
+.info h3 {
+    margin: 10px;
+    font-weight: 900;
+}
+
+.textMessage {
+    position: relative;
+    margin: 40px 0px 30px;
+}
+
+.info p {
+    display: block;
+    font-size: 10px;
+
+}
+
+.oneMessage {
+    display: none;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #766B6B;
+    border: none;
+    color: #fff;
+}
+
+.oneMessage::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.messageBtn {
+    border: none;
+    background-color: #645B5B;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.editBtn {
+    display: block;
+}
+
+.checkBtn {
+    display: none;
+}
+
+.rightWrap {
+    width: 80%;
+    background-color: #645B5B;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.chatHeader {
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    font-family: "Noto Sans TC";
+    margin: 20px 50px 0px;
+    letter-spacing: 1px;
+}
+
+.chatName {
+    font-weight: 900;
+    font-size: 12px;
+}
+
+.joinTime {
+    margin-left: 10px;
+}
+
+.chatMessage {
+    display: flex;
+    flex-direction: column;
+    font-family: "Noto Sans TC";
+    color: #fff;
+    margin-top: 20px;
+    overflow-y: scroll;
+    height: 800px;
+}
+
+.message {
+    display: flex;
+    margin: 0px 50px 30px;
+}
+
+.chatRole {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.peopleHead {
+    width: 50px;
+}
+
+.chatRole span {
+    margin-top: 12px;
+    font-size: 8px;
+    text-align: left;
+}
+
+.chatBox {
+    display: flex;
+}
+
+.chatContent {
+    margin-left: 30px;
+    max-width: 600px;
+    background-color: #524A4A;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    position: relative;
+}
+
+.chatContent::after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: -23px;
+    width: 0;
+    height: 0;
+    border-width: 12px;
+    border-style: solid;
+    border-right-color: #524A4A;
+    /* border-right-color: transparent; */
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.chatContent p {
+    font-size: 16px;
+    padding: 20px;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+    text-justify: unset;
+    text-align: left;
+    width: 100%;
+
+}
+
+.delText {
+    display: none;
+    background-color: #968686;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    line-height: 2.5;
+    border-radius: 7px;
+}
+
+.textWrap {
+
+    width: 97%;
+    height: 50px;
+    background-color: #968686;
+    margin-left: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.iconWrap {
+    display: flex;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.iconWrap i {
+    margin: 0px 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.chatLine {
+    height: 45px;
+    border: 1px solid;
+    color: #C4B1B1;
+}
+
+.chatText {
+    border: none;
+    width: 100%;
+    background-color: #968686;
+    height: 45px;
+    font-size: 14px;
+    padding: 15px;
 }
